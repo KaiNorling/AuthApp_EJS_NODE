@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {      .content-auto {        content-visibility: auto;      }    }  </style>
+
+</head>
+
+
+<body >
+  <%var error %>
+
+
+    <section class="bg-blue-500 hover:bg-blue-450 ">
+        <div class="container mx-auto  p-[5px] text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            <h1 class="text-center text-white text-[25px] bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">REGISTER PAGE</h1>
+            <% if (error) {%>
+              <h5 class="py-[5px] px-[20px]  rounded-md  tracking-wide bg-yellow-500 hover:red-yellow-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded"> <%= error %></h5>
+              <% }%>
+
+     
+
+        <div class="h-screen container mx-auto flex justify-center mt-[30px] w-full">
+            <form method="POST" enctype="multipart/form-data" >
+              <div class="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
+                <img class="h-14 mb-4 mx-auto" src="https://www.synointcdn.com/wp-content/uploads/2019/04/Amazon-Logo-PNG.png" alt="">
+                <div class="space-y-4">
+                    <h1 class="text-center text-2xl font-semibold text-black-600">Register</h1>
+                 
+                    <div>
+                        <label for="email" class="block mb-1 text-gray-600 font-semibold">Email</label>
+                        <input type="tsext" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full text-gray-600" name="email" />
+                      </div>
+                    <div>
+                      <label for="email" class="block mb-1 text-gray-600 font-semibold">Username</label>
+                      <input type="text" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full text-gray-600" name="username" />
+                    </div>
+          
+                    <div>
+                      <label for="email" class="block mb-1 text-gray-600 font-semibold">Password</label>
+                      <input type="password" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full text-gray-600" name="password"/>
+                    </div>
+                    <div>
+                        <h2 class="text-center text-2xl font-semibold text-gray-600">Avatar</h2>
+
+                        <input type="file" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full text-gray-600" name="avatar"/>
+                      </div>
+                      <div>
+                        <h2 class="text-center text-2xl font-semibold text-gray-600">Resume</h2>
+
+                        <input type="file" class="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full text-gray-600" name="resume"/>
+                      </div>
+                  </div>
+
+
+                  <button class="mt-4 w-full bg-yellow-500 font-semibold py-2 rounded-md  tracking-wide">Register</button>
+                  <button class=" w-full mt-4  font-semibold py-2 rounded-md  tracking-wide bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-4 border-b-4 border-yellow-700 hover:border-yellow-500 rounded">Register</button>
+
+                  <div class="link p-[5px] flex justify-between">
+                    <button  class=" bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded "><a href="/">HOME </a> </button>
+                    <button  class=" bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="/login">LOGIN</a></button>
+                 
+                
+    
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+
+
+      
+
+       
+    
+    
+    
+    </body>
+    </html>
